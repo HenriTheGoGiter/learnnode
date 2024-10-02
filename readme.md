@@ -1,4 +1,5 @@
 # Learnnode
 
 This commit will ...
-Some helpful tips amd blablabla
+
+### Some helpful tips and blablabla
