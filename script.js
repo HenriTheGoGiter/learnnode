@@ -14,7 +14,7 @@ let m=[1, 1.2, 'asdasd', true]; // array (object)
 let n={name: 'henri', age: 18}; // object
 console.log(typeof m)
 console.log(typeof n) */
-let num = 3;
+/*let num = 3;
 num=num+2;
 num+=2;
 num-=3;
@@ -28,4 +28,9 @@ num--; // vähendada väärtust ühe võrra
 num=Math.PI;
 num=Math.abs (-2);
 num=2**5
-console.log(num);
+console.log(num); */
+let text = 'hello world';
+text = text + '!!!';
+text+= 'abc';
+text=text.length
+console.log(text);
