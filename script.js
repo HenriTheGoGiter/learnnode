@@ -28,9 +28,29 @@ num--; // vähendada väärtust ühe võrra
 num=Math.PI;
 num=Math.abs (-2);
 num=2**5
-console.log(num); */
+console.log(num);
 let text = 'hello world';
 text = text + '!!!';
 text+= 'abc';
-text=text.length
-console.log(text);
+text=text.length */
+
+let answer = !true // NOT -> kui on ! siis tre muutub false ja vastupidi
+answer = true && false; // AND
+answer = true && true;
+answer = false || true; // or
+answer = true && false || true && !false && !(true || false); // = false
+answer = false ^ true; // XOR = exclusiv order. On true kui ühel pool on true.
+
+answer = 1 == 2; // kaks = kontrollib, kas mölemad on võrdsed. Siin näitab False
+answer = '1' == 1; // siin tlgendab numbri ja kuna on võrdsed, siis näitab true
+answer = '1' === 1; // kontrollivad "tüüpe" naiteks, kuidas üks on orants ja teine üks on heleroheline
+answer = '' == 0;
+answer = !1 == 2; // üks ei ole võrden kahe, jah ei ole = true
+answer = 2 < 10; // kaks väiksem kui kümme. True
+answer = 2 > 10;
+answer = 10 < 10;
+answer = 10 > 10;
+answer = 10 <= 10;
+answer = 10 >= 10;
+
+console.log(answer);
