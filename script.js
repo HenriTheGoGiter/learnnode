@@ -32,7 +32,7 @@ console.log(num);
 let text = 'hello world';
 text = text + '!!!';
 text+= 'abc';
-text=text.length */
+text=text.length 
 
 let answer = !true // NOT -> kui on ! siis tre muutub false ja vastupidi
 answer = true && false; // AND
@@ -54,3 +54,52 @@ answer = 10 <= 10;
 answer = 10 >= 10;
 
 console.log(answer);
+
+import readline from 'node:readline'; // ????????
+const rl = readline.createInterface({
+    input: ProcessingInstruction.stdin,
+    output: ProcessingInstruction.stdout,
+});
+
+
+
+rl.question('Give us a number', a => {; 
+if(a<10){
+    console.log('less than 10');
+}else if(a==10){
+    console.log('equal to 10')
+} 
+else {
+    console.log('more than 10')
+}
+rl.close();
+}) // Ei saa muffigi aru. */
+
+const date = new Date('2005-12-23T12:00:00');
+console.log(date);
+console.log(date.getDay());
+
+switch(date.getDay()){
+    case 0:
+        console.log('Pühapäev');
+        break;
+    case 1:
+        console.log('Esmaspäev');
+        break;
+    case 2:
+        console.log('Teisipäev');
+        break;
+    case 3:
+        console.log('Kolmapäev');
+        break;
+    case 4:
+        console.log('Nelöjapäev');
+        break;
+    case 5:
+        console.log('Reede');
+        break;
+    case 6:
+        console.log('Laupäev');
+        break;
+
+}
