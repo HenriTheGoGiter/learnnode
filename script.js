@@ -73,7 +73,7 @@ else {
     console.log('more than 10')
 }
 rl.close();
-}) // Ei saa muffigi aru. */
+}) // Ei saa muffigi aru. 
 
 const date = new Date('2005-12-23T12:00:00');
 console.log(date);
@@ -102,4 +102,11 @@ switch(date.getDay()){
         console.log('Laupäev');
         break;
 
+} */
+
+for(let i=0;i<10;i++){
+    console.log(i);
+}
+for(let i=9;i>=0;i--){
+    console.log(i);
 }
