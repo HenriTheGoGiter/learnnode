@@ -135,7 +135,6 @@ while(i<0){
 do {
     console.log('loop');
 } while(i<0);
-*/
 
 let array = ['banana', 'apple', 'cherry', 'granade'];
 
@@ -151,3 +150,60 @@ let object = {
 for(key in object){
     console.log(key, object[key])
 }
+*/
+
+function hello(){
+    console.log('hello function');
+}
+
+hello();
+
+function greet(name='Nameless', age){
+    console.log('Hello ' + name + '!You are ' + age + ' years old');
+}
+
+greet('Eric', 18);
+greet('Bob', 78);
+greet();
+
+let sum = function (a, b){
+    return a+b;
+}
+
+let answer = sum(2,4);
+console.log(answer);
+
+let sub = (a,b) => {
+    return a-b;
+}
+answer = sum(2,4);
+console.log(answer);
+
+let div =(a, b) => a/b;
+
+answer = div(2,4);
+console.log(answer);
+
+let root = a => a*a;
+
+answer = root(6);
+console.log(answer);
+
+let object = {
+    hello(){
+        console.log('Hello object');
+    },
+    goodbye: () => {
+        console.log('Goodbye object');
+    }
+}
+
+object.hello();
+object.goodbye();
+
+function isNameLong(name){
+    return name.length > 5;
+}
+
+console.log(isNameLong('Optimus'));
+console.log(isNameLong('Bob'));
