@@ -126,7 +126,7 @@ for(let i=0; i<=1000; i+=2){
     console.log(1);
 }
 */
-
+/*
 let i= 10;
 while(i<0){
     console.log('loop');
@@ -135,4 +135,19 @@ while(i<0){
 do {
     console.log('loop');
 } while(i<0);
+*/
 
+let array = ['banana', 'apple', 'cherry', 'granade'];
+
+for(value of array){
+    console.log(value);
+}
+
+let object = {
+    name: 'Bob',
+    Age: 78,
+    color: 'pink',
+}
+for(key in object){
+    console.log(key, object[key])
+}
