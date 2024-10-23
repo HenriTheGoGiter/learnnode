@@ -150,7 +150,6 @@ let object = {
 for(key in object){
     console.log(key, object[key])
 }
-*/
 
 function hello(){
     console.log('hello function');
@@ -207,3 +206,14 @@ function isNameLong(name){
 
 console.log(isNameLong('Optimus'));
 console.log(isNameLong('Bob'));
+*/
+
+function recursive(num){
+    console.log(num);
+    if(num<10){
+        //num++;
+        recursive(++num);
+    }
+}
+// recursive = functsioon, mis kutsub välja ise ennast.
+recursive(0);
