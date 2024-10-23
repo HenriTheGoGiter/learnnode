@@ -110,3 +110,19 @@ for(let i=0;i<10;i++){
 for(let i=9;i>=0;i--){
     console.log(i);
 }
+for(let i=9;i<0;i--){
+    console.log(i);
+}
+
+for(let i=0; i<=1000; i+=2){
+    console.log(1);
+}
+
+for(let i=0; i<=1000; i*=2){
+    console.log(1);
+}
+
+for(let i=0; i<=1000; i+=2){
+    console.log(1);
+}
+
