@@ -103,7 +103,7 @@ switch(date.getDay()){
         break;
 
 } */
-
+/*
 for(let i=0;i<10;i++){
     console.log(i);
 }
@@ -125,4 +125,14 @@ for(let i=0; i<=1000; i*=2){
 for(let i=0; i<=1000; i+=2){
     console.log(1);
 }
+*/
+
+let i= 10;
+while(i<0){
+    console.log('loop');
+}
+
+do {
+    console.log('loop');
+} while(i<0);
 
