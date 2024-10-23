@@ -206,7 +206,6 @@ function isNameLong(name){
 
 console.log(isNameLong('Optimus'));
 console.log(isNameLong('Bob'));
-*/
 
 function recursive(num){
     console.log(num);
@@ -217,3 +216,10 @@ function recursive(num){
 }
 // recursive = functsioon, mis kutsub välja ise ennast.
 recursive(0);
+*/
+
+let fruits = ['apple', 'mango', 'banana', 'handgranade'];
+
+fruits.forEach((fruit, i, fruits) => {
+    console.log(fruit, i, fruits);
+});
