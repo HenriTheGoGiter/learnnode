@@ -218,8 +218,34 @@ function recursive(num){
 recursive(0);
 */
 
-let fruits = ['apple', 'mango', 'banana', 'handgranade'];
+let fruits = ['apple', 'mango', 'banana', 'handgranade', 'cherry'];
 
-fruits.forEach((fruit, i, fruits) => {
+fruits.forEach(function (fruit, i, fruits){
     console.log(fruit, i, fruits);
 });
+
+let capitalizeFruits = fruits.map(function(fruit) {
+    return fruit.charAt(0).toUpperCase() + fruit.slice(1);
+});
+
+console.log(capitalizeFruits)
+
+let mangoIndex = fruits.findIndex(function (fruit) {
+    return fruit == 'mango';
+});
+
+console.log(mangoIndex);
+
+let fruitsWithA = fruits.filter(function (fruit){
+   return !fruit.includes('a');
+});
+
+console.log(fruitsWithA);
+
+let nums = [3, 8, 9, 1323, 4, 7, 2 ,5];
+
+let product = nums.reduce(function (prod, num) {
+    return prod * num;
+}, 1);
+
+console.log(product);
