@@ -303,7 +303,7 @@ person1.idCode = '50512231423'
 console.log(person.getBirthYear());
 console.log(person1);
 console.log();
-*/
+
 
 // HTML algab pihta!
 let button = document.querySelector('button');
@@ -317,5 +317,27 @@ let input = document.querySelector('input');
 input.addEventListener('input', function(event){
 let text = document.querySelector ('h1#text');
 text.innerHTML = input.value.split('').reverse().join('');
+});
+*/
+
+let button = document.querySelector('button');
+let input = document.querySelector('input');
+let list = document.querySelector('ul');
+
+
+let add = () => {
+    if(input.value. trim()){
+    let listItem = document.createElement('li');
+    listItem.innerHTML = input.value.trim();
+    list.append(listItem);
+    }
+    input.value = '';
+}
+
+button.addEventListener('click', add)
+input.addEventListener('keydown', event => {
+    if(event.code === 'Enter'){
+        add();
+    }
 });
 
