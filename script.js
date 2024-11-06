@@ -251,7 +251,7 @@ console.log(product);
 //KUSKIL SIIN ON ERROR!
 sortsortedNums = num((a,b) => b - a);
 
-console.log(sortedNums); */
+console.log(sortedNums); 
 
 let person = {
     name:'Henri',
@@ -303,3 +303,4 @@ person1.idCode = '50512231423'
 console.log(person.getBirthYear());
 console.log(person1);
 console.log();
+*/
