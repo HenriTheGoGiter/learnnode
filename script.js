@@ -341,3 +341,10 @@ input.addEventListener('keydown', event => {
     }
 });
 
+button.addEventListener('mouseover', () => {
+    button.disabled = true; 
+});
+
+button.addEventListener('mouseleave', () => {
+    button.disabled = false;
+});
