@@ -396,4 +396,31 @@ function step(timestamp){
 
 requestAnimationFrame(step); */
 
-canvas.addEvent 
+let canvas = document.querySelector('canvas');
+let context = canvas.getContext('2d');
+
+let draw = false;
+
+Canvas.addEventListener('mousemove', event => {
+    if(draw){
+        let rect = event.target.getBoundClientRect();
+        let x = event.clientX - rect.left;
+        let y = event.clientY - rect.right;
+        ontext.beginPath();
+        context.arc(event.clientX, event.clientY, 30, 0, 2*Math.PI);
+        context.fill();
+    }
+});
+
+canvas.addEventListener('mousedown', () => {
+    draw = true;
+});
+
+canvas.addEventListener('mousedown', () => {
+    draw = false;
+});
+
+let color = document.querySelector('input');
+color.addEventListener('input', () => {
+    context.fillStyle = color.value;
+});
