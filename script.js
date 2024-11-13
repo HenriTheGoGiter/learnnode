@@ -396,3 +396,4 @@ function step(timestamp){
 
 requestAnimationFrame(step); */
 
+canvas.addEvent 
