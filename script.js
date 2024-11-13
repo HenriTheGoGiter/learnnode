@@ -347,18 +347,52 @@ button.addEventListener('mouseover', () => {
 
 button.addEventListener('mouseleave', () => {
     button.disabled = false;
-}); */
+}); 
 
 let canvas = document.querySelector('canvas');
 let context = canvas.getContext('2d');
-context.moveTo(0,0);
-context.lineTo(300,300)
-context.stroke();
 
-context.beginPath();
-context.arc(600, 600, 50, 0, 2*Math.PI);
-context.stroke();
+let x = 100;
+let y = 100;
 
-context.font = "50px Arial";
-context.fillText('WOW CANVAS!', 600, 100);
-context.strokeText('WOW CANVAS!', 600, 200);
+context.rect(100, 100, 100, 100);
+context.fillStyle = '#b3a899'
+context.fill();
+
+setInterval(() => {
+    context.clearRect(x,y, 100, 100);
+    context.beginPath();
+    x+=1;
+    context.rect(x, y, 100, 100);
+    context.fillStyle = '#b3a899';
+    context.fill(); // Liigub kuub paremale
+}, 16,6666666666); 
+
+let start;
+let prevTimestamp;
+function step(timestamp){
+    if(prevTimestamp == undefined){
+        prevTimestamp = timestamp
+    }
+    if(start == underfined){
+        start = timestamp;
+    }
+    let delta = timestamp - prevTimestamp;
+    prevTimestamp = timestamp;
+
+    console.log(delta);
+
+    console.log(timestamp);
+    console.log(start);
+    context.clearRect(x-1,y, 100, 100);
+    context.beginPath();
+    x+=10/60*delta;
+    context.rect(x, y, 100, 100);
+    context.fillStyle = '#b3a899';
+    context.fill();
+
+    requestAnimationFrame(step);
+}
+
+requestAnimationFrame(step); */
+
