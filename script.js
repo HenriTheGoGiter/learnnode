@@ -394,7 +394,7 @@ function step(timestamp){
     requestAnimationFrame(step);
 }
 
-requestAnimationFrame(step); */
+requestAnimationFrame(step);
 
 let canvas = document.querySelector('canvas');
 let context = canvas.getContext('2d');
@@ -423,4 +423,9 @@ canvas.addEventListener('mousedown', () => {
 let color = document.querySelector('input');
 color.addEventListener('input', () => {
     context.fillStyle = color.value;
-});
+}); */ 
+
+import common from ('./common.js');
+common.hello();
+import es from './es.js';
+es.hello();
