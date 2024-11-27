@@ -5,7 +5,7 @@
   "main": "common.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon script.js"
+    "start": "nodemon -e js,json,njk script.js"
   },
   "keywords": [],
   "author": "",
