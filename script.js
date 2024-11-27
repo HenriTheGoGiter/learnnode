@@ -425,22 +425,37 @@ color.addEventListener('input', () => {
     context.fillStyle = color.value;
 }); */ 
 
+//27.11.2024
+
 import express from 'express';
+import fs from 'fs';
+import nunjucks from 'nunjucks';
+
 const app = express();
 const port = 3000
 
-app.get('/', (req, res) => {
-    res.sendFile(import.meta.dirname + '/views/index.html');
-});
-
-app.get('/about', (req, res) => {
-    res.sendFile(import.meta.dirname + '/views/about.html');
+nunjucks.configure('views', {
+    autoescape: true,
+    express: app
 });
 
 app.get('/hello', (req, res) => {
-    res.sendFile(import.meta.dirname + '/views/about.html');
+    res.render('index.njk');
+});
+
+app.get('/about', (req, res) => {
+    res.render('about.njk');
+});
+
+app.get('/form', (req, res) => {
+    res.render('form.njk');
+});
+
+app.get('/answer', (req, res) => {
+    res.render('answer.njk', req.query);
 });
 
   app.listen(port, () => {
     console.log(`example app listening on port http://localhost:${port}`)
   });
+  
