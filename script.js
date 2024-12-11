@@ -439,7 +439,7 @@ nunjucks.configure('views', {
     express: app
 });
 
-app.get('/hello', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index.njk');
 });
 
@@ -453,6 +453,51 @@ app.get('/form', (req, res) => {
 
 app.get('/answer', (req, res) => {
     res.render('answer.njk', req.query);
+});
+
+app.get('/square', (req, res) => {
+    res.render('square.njk');
+});
+
+app.get('/squareanswer', (req, res) => {
+    let a = req.query.a;
+    let answer = {
+        S: Math.pow(a, 2),
+        a: a,
+        V: Math.pow(a, 3),
+        P: 4 * a,
+    };
+    res.render('squareanswer.njk', req.query);
+});
+
+app.get('/circle', (req, res) => {
+    res.render('circle.njk');
+});
+
+app.get('/circleanswer', (req, res) => {
+    let a = req.query.a;
+    let answer = {
+        S: Math.pow(a, 2),
+        a: a,
+        V: Math.pow(a, 3),
+        P: 4 * a,
+    };
+    res.render('circleanswer.njk', req.query);
+});
+
+app.get('/pythagoras', (req, res) => {
+    res.render('pythagoras.njk');
+});
+
+app.get('/pythagorasanswer', (req, res) => {
+    let a = req.query.a;
+    let answer = {
+        S: Math.pow(a, 2),
+        a: a,
+        V: Math.pow(a, 3),
+        P: 4 * a,
+    };
+    res.render('pythagorasanswer.njk', req.query);
 });
 
   app.listen(port, () => {
