@@ -467,7 +467,7 @@ app.get('/squareanswer', (req, res) => {
         V: Math.pow(a, 3),
         P: 4 * a,
     };
-    res.render('squareanswer.njk', req.query);
+    res.render('squareanswer.njk', answer);
 });
 
 app.get('/circle', (req, res) => {
@@ -477,12 +477,12 @@ app.get('/circle', (req, res) => {
 app.get('/circleanswer', (req, res) => {
     let r = req.query.r;
     let answer = {
-        S: Math.pow(π * (r, 2)),
+        S: Math.pow(r, 2) * Math.PI,
         r: r,
-        V: Math.pow(4/3 * π * (r, 2)),
+        V: Math.pow(r, 2) * Math.PI * 4/3,
         C: 2 * Math.PI * r,
     };
-    res.render('circleanswer.njk', req.query);
+    res.render('circleanswer.njk', answer);
 });
 
 app.get('/pythagoras', (req, res) => {
@@ -491,12 +491,13 @@ app.get('/pythagoras', (req, res) => {
 
 app.get('/pythagorasanswer', (req, res) => {
     let a = req.query.a;
+    let b = req.query.b;
     let answer = {
         b: b,
         a: a,
-        C: Math.pow((a, 2)+(b, 2)),
+        C:Math.sqrt(Math.pow(a, 2)+ Math.pow(b,2)),
     };
-    res.render('pythagorasanswer.njk', req.query);
+    res.render('pythagorasanswer.njk', answer);
 });
 
   app.listen(port, () => {
