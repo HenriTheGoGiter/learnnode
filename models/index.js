@@ -6,7 +6,7 @@ import Sequelize from'sequelize';
 import process from'process';
 const basename = path.basename(import.meta.filename);
 const env = process.env.NODE_ENV || 'development';
-import configs from '/../config/config.json' with {type:'json'};
+import configs from '../config/config.json' with {type:'json'};
 const config = configs[env];
 const db = {};
 

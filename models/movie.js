@@ -1,7 +1,7 @@
 'use strict';
 import {Model} from 'sequelize';
 export default (sequelize, DataTypes) => {
-  class User extends Model {
+  class Movie extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,13 +11,13 @@ export default (sequelize, DataTypes) => {
       // define association here
     }
   }
-  User.init({
+  Movie.init({
     name: DataTypes.TEXT,
-    email: DataTypes.TEXT,
-    password: DataTypes.TEXT
+    length: DataTypes.INTEGER,
+    description: DataTypes.TEXT
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'Movie',
   });
-  return User;
+  return Movie;
 };
