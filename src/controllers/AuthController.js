@@ -7,6 +7,7 @@ const db = new Sequelize({
     dialect: 'sqlite',
     storage: 'db.sqlite'
 });
+
 const User = db.define('User', {
     name: DataTypes.TEXT,
     email: DataTypes.TEXT,
