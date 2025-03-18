@@ -16,9 +16,14 @@ app.use(session({
     cookie: {}
 }));
 
-nunjucks.configure('views', {
+let env = nunjucks.configure('views', {
     autoescape: true,
     express: app
+});
+
+app.use((req, res, next) => {
+  env.addGlobal('auth', req.session.user);
+  next();
 });
 
 import PublicController from './src/controllers/PublicController.js';

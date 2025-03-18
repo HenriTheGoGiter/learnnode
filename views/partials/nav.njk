@@ -29,8 +29,17 @@
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
-        {% if user %}
-        {{ user.name }}
+        {% if auth %}
+        <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ auth.name }}
+           </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </li>
         {% else %}
         <li class="nav-item">
           <a class="btn btn-success" href="/register">Register</a>
