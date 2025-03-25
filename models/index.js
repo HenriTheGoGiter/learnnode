@@ -2,11 +2,11 @@
 
 import fs from 'fs';
 import path from 'path';
-import Sequelize from'sequelize';
-import process from'process';
+import Sequelize from 'sequelize';
+import process from 'process';
 const basename = path.basename(import.meta.filename);
 const env = process.env.NODE_ENV || 'development';
-import configs from '../config/config.json' with {type:'json'};
+import configs from '../config/config.json' with {type: 'json'};
 const config = configs[env];
 const db = {};
 
@@ -30,7 +30,7 @@ fs
     );
   })
   .forEach(async file => {
-    const modelFile = await import ('file:' + path.join(import.meta.dirname, file));
+    const modelFile = await import('file:' + path.join(import.meta.dirname, file));
     const model = modelFile.default(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });

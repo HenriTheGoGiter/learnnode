@@ -2,8 +2,9 @@ import { Router } from 'express';
 const router = Router();
 import db from '../../models/index.js'
 
-router.get('/', (req, res) => {
-    res.render('index.njk');
+router.get('/', async (req, res) => {
+    const movies = await db.Movie.findAll();
+    res.render('index.njk', { movies });
 });
 
 router.get('/about', (req, res) => {
@@ -42,7 +43,7 @@ router.get('/circleanswer', (req, res) => {
     let answer = {
         S: Math.pow(r, 2) * Math.PI,
         r: r,
-        V: Math.pow(r, 2) * Math.PI * 4/3,
+        V: Math.pow(r, 2) * Math.PI * 4 / 3,
         C: 2 * Math.PI * r,
     };
     res.render('circleanswer.njk', answer);
@@ -58,7 +59,7 @@ router.get('/pythagorasanswer', (req, res) => {
     let answer = {
         b: b,
         a: a,
-        C:Math.sqrt(Math.pow(a, 2)+ Math.pow(b,2)),
+        C: Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)),
     };
     res.render('pythagorasanswer.njk', answer);
 });
